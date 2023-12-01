@@ -3,7 +3,7 @@ const botao = document.querySelector("button");
 const Inome = document.querySelector(".nome");
 const Iemail = document.querySelector(".email");
 const Isenha = document.querySelector(".senha");
-const Itel = document.querySelector(".telefone");
+const Itelefone = document.querySelector(".telefone");
 
 function cadastrar () {
 
@@ -20,7 +20,7 @@ function cadastrar () {
         nome: Inome.value,
         email: Iemail.value,
         senha: Isenha.value,
-        telefone: Itel.value
+        telefone: Itelefone.value,
     })
 
 })
@@ -32,7 +32,7 @@ function cadastrar () {
         Inome.value = "";
         Iemail.value = "";
         Isenha.value = "";
-        Itel.value = "";
+        Itelefone.value = "";
  };
 
 formulario.addEventListener('submit', function (event) {
