@@ -1,43 +1,14 @@
-const formulario = document.querySelector("form");
-const botao = document.querySelector("button");
-const Inome = document.querySelector(".nome");
-const Iemail = document.querySelector(".email");
-const Isenha = document.querySelector(".senha");
-const Itelefone = document.querySelector(".telefone");
 
-function cadastrar () {
+var btnSignin = document.querySelector("#signin");
+var btnSignup = document.querySelector("#signup");
 
-    fetch ("http://localhost:8080/usuarios",
-    
-    {
-    
-        headers: {
-            'Accept':'application/json',
-            'Content-Type': 'application/json'
-    },
-    method: "POST",
-    body: JSON.stringify({
-        nome: Inome.value,
-        email: Iemail.value,
-        senha: Isenha.value,
-        telefone: Itelefone.value,
-    })
+var body = document.querySelector("body");
 
-})
- .then(function (res)  { console.log (res) })
- .catch(function (res)  { console.log (res) })
-
-};
-    function limpar ()  {
-        Inome.value = "";
-        Iemail.value = "";
-        Isenha.value = "";
-        Itelefone.value = "";
- };
-
-formulario.addEventListener('submit', function (event) {
-    event.preventDefault();
-   
-    cadastrar();
-    limpar();
+btnSignin.addEventListener("click", function  () {
+    body.className = "sign-in-js";
 });
+
+btnSignup.addEventListener("click", function () {
+    body.className = "sign-up-js";
+});
+
